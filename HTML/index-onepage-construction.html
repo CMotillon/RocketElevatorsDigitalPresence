@@ -114,32 +114,32 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a href="#">
+										<a href="#home-nav">
 											HOME
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="#services">
+										<a href="#services-nav">
 											SERVICES
 										</a>
 									</li>
 									<li><!-- PORTFOLIO -->
-										<a href="#portfolio">
+										<a href="#portfolio-nav">
 											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="#news-nav">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="#clients-nav">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="#contact-nav">
 											CONTACT
 										</a>
 									</li>
@@ -250,7 +250,7 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-warning btn-lg" href="#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-warning btn-lg" href="#services-nav">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
 								data-x="680"
@@ -265,7 +265,7 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-warning btn-lg" href="#services">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-warning btn-lg" href="#services-nav">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 
@@ -358,7 +358,7 @@
 
 
 			<!-- BUTTON CALLOUT -->
-			<a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+			<a href="#contact-nav" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
 					Did Rocket Elevators convince you? 
 					<strong>Contact us &raquo;</strong>
@@ -369,19 +369,19 @@
 
 			
 			<!-- Services -->
-			<section id="services">
+			<section id="services-nav">
 				<div class="container">
 
 					<div class="row">
 						<div class="col-sm-4">
-							<a class="image-hover" href="#portfolio">
+							<a class="image-hover" href="#portfolio-nav">
 								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark --></span>
 								<img class="img-fluid" src="assets/images/general/checkmark.png" alt="img" />
 							</a>
 
 							<h3 class="mt-10">Our Accomplishments</h3>
 							<p>We have finished many projects and received numerous awards over the years.</p>
-							<a href="#portfolio" class="btn btn-default">PORTFOLIO</a>
+							<a href="#portfolio-nav" class="btn btn-default">PORTFOLIO</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -423,7 +423,7 @@
 						<h2 class="fs-40 fw-300">Elevating according to your needs since 1976</h2>
 						<a class="btn btn-default btn-lg" href="#">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
-						<a class="btn btn-warning btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-warning btn-lg" href="#contact-nav">CONTACT US <i class="fa fa-angle-right"></i></a>
 					</div>
 
 				</div>
@@ -434,7 +434,7 @@
 
 
 			<!-- PORTFOLIO -->
-			<section id="portfolio">
+			<section id="portfolio-nav">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -452,7 +452,7 @@
 
 				</div>
 
-				<div id="portfolio" class="portfolio-nogutter">
+				<div id="portfolio-nav" class="portfolio-nogutter">
 
 						<div class="row mix-grid">
 
@@ -835,7 +835,7 @@
 
 
 			<!-- News -->
-			<section id="news">
+			<section id="news-nav">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -952,7 +952,7 @@
 			<!-- /News -->
 
 			<!-- Clients -->
-			<section id="clients" class="alternate">
+			<section id="clients-nav" class="alternate">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -1030,7 +1030,7 @@
 
 
 			<!-- CONTACT -->
-			<section id="contact">
+			<section id="contact-nav">
 				<div class="container">
 
 					<header class="text-center mb-60">
@@ -1100,29 +1100,29 @@
 									<div class="row">
 											<div class="col-md-3">
 												<label for="contact:name">Full Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<input id="name" required type="text" value="" class="form-control" name="contact[name][required]">
 											</div>
 											<div class="col-md-3">
 												<label for="contact:business_name">Business Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:business_name">
+												<input id="company_name" required type="text" value="" class="form-control" name="contact[name][required]">
 											</div>
 											<div class="col-md-3">
 												<label for="contact:email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<input id="email" required type="email" value="" class="form-control" name="contact[email][required]">
 											</div>
 											<div class="col-md-3">
 												<label for="contact:phone">Phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<input id="phone" type="text" value="" class="form-control" name="contact[phone]">
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-8">
 												<label for="contact:subject">Project Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input id="project_name" required type="text" value="" class="form-control" name="contact[subject][required]">
 											</div>
 											<div class="col-md-4">
 												<label for="contact_department">Department</label>
-												<select class="form-control pointer" name="contact[department]">
+												<select id="department" class="form-control pointer" name="contact[department]">
 													<option value="">--- Select ---</option>
 													<option value="Residential">Residential</option>
 													<option value="Corporate">Corporate</option>
@@ -1132,13 +1132,13 @@
 									<div class="row">
 										<div class="col-md-12">
 											<label for="contact:project_description">Project Description *</label>
-											<textarea required maxlength="10000" rows="8" class="form-control" name="contact[project_description]" id="contact:project_description"></textarea>
+											<textarea id="project_description" required maxlength="10000" rows="8" class="form-control" name="contact[project_description]"></textarea>
 										</div>
 								    </div>
 									<div class="row">
 											<div class="col-md-12">
 												<label for="contact:message">Message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<textarea id="message" required maxlength="10000" rows="8" class="form-control" name="contact[message]"></textarea>
 											</div>
 									</div>
 									<div class="row">
@@ -1146,7 +1146,7 @@
 												<label for="contact:attachment">File Attachment</label>
 
 												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<input id="attachment" class="custom-file-upload" type="file" id="file" name="contact[attachment]" data-btn-text="Select a File" />
 												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 											</div>
@@ -1266,9 +1266,9 @@
 							<h4 class="letter-spacing-1">EXPLORE ROCKET ELEVATORS</h4>
 							<ul class="footer-links list-unstyled">
 								<li><a href="#">Home</a></li>
-								<li><a href="#services">Our Services</a></li>
-								<li><a href="#clients">Our Clients</a></li>
-								<li><a href="#contact">Contact Us</a></li>
+								<li><a href="#services-nav">Our Services</a></li>
+								<li><a href="#clients-nav">Our Clients</a></li>
+								<li><a href="#contact-nav">Contact Us</a></li>
 							</ul>
 							<!-- /Links -->
 
@@ -1278,7 +1278,7 @@
 
 							<!-- Newsletter Form -->
 							<h4 class="letter-spacing-1">WHY US</h4>
-							<p>We have the conviction that we create the most innovative and reliable products on the market. <a href="index-onepage-construction.html#contact">Contact us</a> today for any questions you might have.</p>
+							<p>We have the conviction that we create the most innovative and reliable products on the market. <a href="#contact-nav">Contact us</a></li> today for any questions you might have.</p>
 
 							<h4 class="letter-spacing-1">SUBSCRIBE TO OUR NEWSLETTER</h4>
 
