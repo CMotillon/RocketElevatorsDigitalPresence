@@ -32,33 +32,6 @@
     <body>
         <!-- wrapper -->
 		<div id="wrapper">
-
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
@@ -130,7 +103,28 @@
 				</header>
 				<!-- /Top Nav -->
 
-            </div>
+			</div>
+			
+			<!-- QUOTE -->
+			<div>
+				<section id="quote-calculator">
+					<div class="container">
+						<form id="quote-calculator-form">
+							<div class="form-group col-md-4">
+								<label for="building-type">Building Type</label>
+								<select class="form-control" id="building-type">
+									<option>--- Select ---</option>
+									<option>Residential</option>
+									<option>Commercial</option>
+									<option>Corporate</option>
+									<option>Hybrid</option>
+								</select>
+							</div>
+						</form>
+					</div>
+				</section>
+			</div>
+			<!-- /QUOTE-->
 
             <!-- FOOTER -->
 			<footer id="footer">
