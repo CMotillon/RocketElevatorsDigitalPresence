@@ -11,18 +11,18 @@ $config['use_smtp']				= true;						// true|false
 
 	PLEASE NOTE
 	External SMTP (like gmail) is disabled/firewalled by most hosting providers.
-	Please, create an intenal email addres like: noreply@yourdomain.com
+	Please, create an internal email address like: noreply@yourdomain.com
 	You can find SMTP settings in your cPanel (host/port)
 **/
-$config['smtp_host'] 			= '';   					// eg.: smtp.gmail.com
+$config['smtp_host'] 			= 'smtp.gmail.com';   					// eg.: smtp.gmail.com
 $config['smtp_port'] 			= 587;						// eg.: 587
-$config['smtp_user'] 			= ''; 						// you@gmail.com
-$config['smtp_pass'] 			= '';						// password
+$config['smtp_user'] 			= 'cmoutlook17@gmail.com'; 						// you@gmail.com
+$config['smtp_pass'] 			= 'consecrateur0136';						// password
 $config['smtp_ssl']				= false;					// should remain false
 
 
 // Who receive all emails?
-$config['send_to']				= 'youremail@gmail.com';	// destination of all emails sent throught contact form
+$config['send_to']				= 'cedricmotillon@outlook.com';	// destination of all emails sent throught contact form
 
 
 // Email Subject
