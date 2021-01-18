@@ -8877,12 +8877,12 @@ section.dark-2 div.category-grid .card {
 
 	/* footer contact text */
 	#footer address {
-		background:url('../images/_smarty/world-map.png') no-repeat center;
+		background:url('../images/general/world-map.png') no-repeat center;
 	}
 	#footer address .footer-sprite {
 		margin-bottom:20px;
 		padding-left:30px; 
-		background:url('../images/_smarty/footer_sprite.png') no-repeat 0 0;
+		background:url('../images/general/footer_sprite.png') no-repeat 0 0;
 	}
 		#footer address .footer-sprite:last-child {
 			margin-bottom:0;
