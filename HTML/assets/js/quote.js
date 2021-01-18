@@ -9,6 +9,7 @@ $(window).ready(function () {
 function buildingTypeChange() {
     console.log(this.value);
     if (this.value == "Residential") {
+        $("#select").addClass("d-none");
         $("#commercial").addClass("d-none");
         $("#corporate").addClass("d-none");
         $("#hybrid").addClass("d-none");
@@ -22,6 +23,7 @@ function buildingTypeChange() {
     }
 
     else if (this.value == "Commercial") {
+        $("#select").addClass("d-none");
         $("#residential").addClass("d-none");
         $("#corporate").addClass("d-none");
         $("#hybrid").addClass("d-none");
@@ -31,7 +33,8 @@ function buildingTypeChange() {
         })
     }
 
-    else if (this.value == "Corporate") {;
+    else if (this.value == "Corporate") {
+        $("#select").addClass("d-none");
         $("#residential").addClass("d-none");
         $("#commercial").addClass("d-none");
         $("#hybrid").addClass("d-none");
@@ -39,6 +42,7 @@ function buildingTypeChange() {
     }
 
     else if (this.value == "Hybrid") {
+        $("#select").addClass("d-none");
         $("#residential").addClass("d-none");
         $("#corporate").addClass("d-none");
         $("#commercial").addClass("d-none");
@@ -46,6 +50,7 @@ function buildingTypeChange() {
     }
 
     else {
+        $("#select").removeClass("d-none");
         $("#residential").addClass("d-none");
         $("#corporate").addClass("d-none");
         $("#commercial").addClass("d-none");
