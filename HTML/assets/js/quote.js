@@ -1,3 +1,5 @@
+var stories = 20;
+
 $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
 })
@@ -11,6 +13,12 @@ function buildingTypeChange() {
         $("#corporate").addClass("d-none");
         $("#hybrid").addClass("d-none");
         $("#residential").removeClass("d-none");
+        $(window).ready(function() {
+            $("#number-of-appartments").on("change", residentialAppartmentChange);
+        })
+        $(window).ready(function() {
+            $("#number-of-floors").on("change", residentialFloorChange);
+        })
     }
 
     else if (this.value == "Commercial") {
@@ -19,7 +27,7 @@ function buildingTypeChange() {
         $("#hybrid").addClass("d-none");
         $("#commercial").removeClass("d-none");
         $(window).ready(function() {
-            $("#number-of-elevators").on("change", elevatorNumberChange);
+            $("#number-of-elevators").on("change", commercialElevatorChange);
         })
     }
 
@@ -45,9 +53,25 @@ function buildingTypeChange() {
     }
 }
 
-function elevatorNumberChange() {
+function commercialElevatorChange() {
     console.log(this.value);
-    document.getElementById("elevator-return").value = this.value;
+    document.getElementById("commercial-return").value = this.value;
+}
+
+function residentialAppartmentChange() {
+    console.log(this.value);
+    document.getElementById("residential-return").value = Math.ceil(this.value / document.getElementById("number-of-floors").value / 6);
+    if (document.getElementById("residential-return").value == Infinity) {
+        document.getElementById("residential-return").value = 0;
+    }
+}
+
+function residentialFloorChange() {
+    console.log(this.value);
+    document.getElementById("residential-return").value = Math.ceil(document.getElementById("number-of-appartments").value / this.value / 6);
+    if (document.getElementById("residential-return").value == Infinity) {
+        document.getElementById("residential-return").value = 0;
+    }
 }
 
 function onSubmit() {
