@@ -64,6 +64,9 @@ function residentialAppartmentChange() {
     if (document.getElementById("residential-return").value == Infinity) {
         document.getElementById("residential-return").value = 0;
     }
+    if (document.getElementById("number-of-floors").value >= 20) {
+        document.getElementById("residential-return").value *= Math.floor(document.getElementById("number-of-floors").value/20) * 2;
+    }
 }
 
 function residentialFloorChange() {
@@ -71,6 +74,9 @@ function residentialFloorChange() {
     document.getElementById("residential-return").value = Math.ceil(document.getElementById("number-of-appartments").value / this.value / 6);
     if (document.getElementById("residential-return").value == Infinity) {
         document.getElementById("residential-return").value = 0;
+    }
+    if (document.getElementById("number-of-floors").value >= 20) {
+        document.getElementById("residential-return").value *= Math.floor(document.getElementById("number-of-floors").value/20) * 2;
     }
 }
 
