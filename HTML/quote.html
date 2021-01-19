@@ -114,176 +114,71 @@
 								<label for="building-type">Building Type</label>
 								<select class="form-control" id="building-type">
 									<option>--- Select ---</option>
-									<option value="residential">Residential</option>
-									<option value="commercial">Commercial</option>
-									<option value="corporate">Corporate</option>
-									<option value="hybrid">Hybrid</option>
+									<option id="residential" value="residential">Residential</option>
+									<option id="commercial" value="commercial">Commercial</option>
+									<option id="corporate" value="corporate">Corporate</option>
+									<option id="hybrid" value="hybrid">Hybrid</option>
 								</select>
 							</div>
 
-							<div class="form-group col-md-12" id="select">
+							<div class="form-group col-md-12" id="quote">
 								<hr />
 									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Please Select a Building Type</strong>
+										<strong>Request a Quote</strong>
 									</span>
-								<hr />
-							</div>
+									<hr />
 
-							<div class="form-group col-md-12 d-none" id="residential">
-								<hr />
-									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Residential Quote</strong>
-									</span>
-								<hr />
 								<div class="row">
-									<div class="col-md-4">
+									<div id="number-of-appartments" class="col-md-4">
 										<label for="number-of-appartments">Number of Appartment</label>
-										<input id="number-of-appartments" required type="number" class="form-control">
+										<input id="nb-appartments" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-4">
+									<div id="number-of-floors" class="col-md-4">
 										<label for="number-of-floors">Number of Floors (exculding basements)</label>
-										<input id="number-of-floors" required type="number" class="form-control">
+										<input id="nb-floors" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-4">
+									<div id="number-of-basements" class="col-md-4">
 										<label for="number-of-basements">Number of Basements</label>
-										<input id="number-of-basements" required type="number" class="form-control">
-									</div>
-								</div>
-								<hr />
-
-								<div class="row">
-									<div class="col-md-3" id="elevator-amount">
-										<label>Number of Elevator</label>
-										<input readonly id="residential-return" value="" class="form-control"></input>
-								   </div>
-								</div>
-							</div>
-
-							<div class="form-group col-md-12 d-none" id="commercial">
-								<hr />
-									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Commercial Quote</strong>
-									</span>
-								<hr />
-
-								<div class="row">
-									<div class="col-md-3">
-										<label for="number-of-companies">Number of Businesses</label>
-										<input id="number-of-companies" required type="number" class="form-control">
+										<input id="nb-basements" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-3">
-										<label for="number-of-floors">Number of Floors (exculding basements)</label>
-										<input id="number-of-floors" required type="number" class="form-control">
+									<div id="number-of-companies" class="col-md-4">
+										<label for="number-of-companies">Number of Companies</label>
+										<input id="nb-companies" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-3">
-										<label for="number-of-parking-spots">Number of Parking Spaces</label>
-										<input id="number-of-parking-spots" required type="number" class="form-control">
+									<div id="number-of-parking-spots" class="col-md-4">
+										<label for="number-of-parking-spots">Number of Parking Spots</label>
+										<input id="nb-parking" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-3">
-										<label for="number-of-elevators">Number of Elevator Shafts</label>
-										<input id="number-of-elevators" required type="number" class="form-control">
-									</div>
-								</div>
-								<hr />
-
-								<div class="row">
-									<div class="col-md-3" id="elevator-amount">
-										<label>Number of Elevator</label>
-										<input readonly id="commercial-return" value="" class="form-control"></input>
-								   </div>
-								</div>
-							</div>
-
-							<div class="form-group col-md-12 d-none" id="corporate">
-								<hr />
-									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Corporate Quote</strong>
-									</span>
-								<hr />
-								<div class="row">
-									<div class="col-md-3">
-										<label for="number-of-corporations">Number of Companies</label>
-										<input id="number-of-corporations" required type="number" class="form-control">
+									<div id="number-of-elevators" class="col-md-4">
+										<label for="number-of-elevators">Number of Elevators</label>
+										<input id="nb-elevators" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-3">
-										<label for="number-of-floors">Number of Floors (excluding basements)</label>
-										<input id="number-of-floors" required type="number" class="form-control">
+									<div id="number-of-corporations" class="col-md-4">
+										<label for="number-of-corporations">Number of Corporations</label>
+										<input id="nb-corporations" type="number" class="form-control">
 									</div>
 
-									<div class="col-md-3">
-										<label for="number-of-basements">Number of Basements</label>
-										<input id="number-of-basements" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="number-of-parking-spots">Number of Parking Spaces</label>
-										<input id="number-of-parking-spots" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
+									<div id="maximum-occupancy" class="col-md-4">
 										<label for="maximum-occupancy">Maximum Occupants per Floor</label>
-										<input id="maximum-occupancy" required type="number" class="form-control">
+										<input id="nb-occupancy" type="number" class="form-control">
+									</div>
+
+									<div id="business-hours" class="col-md-4">
+										<label for="business-hours">Hours of Activity (Max 24)</label>
+										<input id="nb-business" type="number" class="form-control">
 									</div>
 								</div>
-								<hr />
 
 								<div class="row">
 									<div class="col-md-3" id="elevator-amount">
 										<label>Number of Elevator</label>
-										<input readonly id="corporate-return" value="" class="form-control"></input>
-								   </div>
-								</div>
-							</div>
-
-							<div class="form-group col-md-12 d-none" id="hybrid">
-								<hr />
-									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Hybrid Quote</strong>
-									</span>
-								<hr />
-								<div class="row">
-									<div class="col-md-3">
-										<label for="number-of-companies">Number of Businesses</label>
-										<input id="number-of-companies" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="number-of-floors">Number of Floors (exculding basements)</label>
-										<input id="number-of-floors" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="number-of-basements">Number of Basements</label>
-										<input id="number-of-basements" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="number-of-parking-spots">Number of Parking Spaces</label>
-										<input id="number-of-parking-spots" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="maximum-occupancy">Maximum Occupants per Floor</label>
-										<input id="maximum-occupancy" required type="number" class="form-control">
-									</div>
-
-									<div class="col-md-3">
-										<label for="business-hours">Hours of activity (max 24h)</label>
-										<input id="business-hours" required type="number" class="form-control">
-									</div>
-								</div>
-								<hr />
-
-								<div class="row">
-									<div class="col-md-3" id="elevator-amount">
-										<label>Number of Elevator</label>
-										<input readonly id="hybrid-return" value="" class="form-control"></input>
+										<input readonly id="elevator-return" value="" class="form-control"></input>
 								   </div>
 								</div>
 							</div>
