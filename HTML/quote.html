@@ -114,10 +114,10 @@
 								<label for="building-type">Building Type</label>
 								<select class="form-control" id="building-type">
 									<option>--- Select ---</option>
-									<option>Residential</option>
-									<option>Commercial</option>
-									<option>Corporate</option>
-									<option>Hybrid</option>
+									<option value="residential">Residential</option>
+									<option value="commercial">Commercial</option>
+									<option value="corporate">Corporate</option>
+									<option value="hybrid">Hybrid</option>
 								</select>
 							</div>
 
@@ -212,7 +212,7 @@
 									</div>
 
 									<div class="col-md-3">
-										<label for="number-of-floors">Number of Floors (exculding basements)</label>
+										<label for="number-of-floors">Number of Floors (excluding basements)</label>
 										<input id="number-of-floors" required type="number" class="form-control">
 									</div>
 
@@ -230,6 +230,14 @@
 										<label for="maximum-occupancy">Maximum Occupants per Floor</label>
 										<input id="maximum-occupancy" required type="number" class="form-control">
 									</div>
+								</div>
+								<hr />
+
+								<div class="row">
+									<div class="col-md-3" id="elevator-amount">
+										<label>Number of Elevator</label>
+										<input readonly id="corporate-return" value="" class="form-control"></input>
+								   </div>
 								</div>
 							</div>
 
@@ -269,6 +277,14 @@
 										<label for="business-hours">Hours of activity (max 24h)</label>
 										<input id="business-hours" required type="number" class="form-control">
 									</div>
+								</div>
+								<hr />
+
+								<div class="row">
+									<div class="col-md-3" id="elevator-amount">
+										<label>Number of Elevator</label>
+										<input readonly id="hybrid-return" value="" class="form-control"></input>
+								   </div>
 								</div>
 							</div>
 						</form>
