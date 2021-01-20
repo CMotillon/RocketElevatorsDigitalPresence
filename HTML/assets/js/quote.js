@@ -227,9 +227,6 @@ function basementChange() {
 function priceCalculator() {
     if($('#standard').is(":checked")) {
         console.log("Price Calculator");
-        $("#standard-label").addClass("col-md-2 btn-blue")
-        $("#premium-label").removeClass("col-md-2 btn-blue")
-        $("#excelium-label").removeClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(7565 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");  
@@ -243,9 +240,6 @@ function priceCalculator() {
 
     else if($('#premium').is(":checked")) {
         console.log("Price Calculator 2");
-        $("#standard-label").removeClass("col-md-2 btn-blue")
-        $("#premium-label").addClass("col-md-2 btn-blue")
-        $("#excelium-label").removeClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(12345 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
@@ -259,9 +253,6 @@ function priceCalculator() {
 
     else if($('#excelium').is(":checked")) {
         console.log("Price Calculator 3");
-        $("#standard-label").removeClass("col-md-2 btn-blue")
-        $("#premium-label").removeClass("col-md-2 btn-blue")
-        $("#excelium-label").addClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(15400 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
