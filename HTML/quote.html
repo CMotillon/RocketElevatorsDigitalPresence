@@ -124,7 +124,7 @@
 							<div class="form-group col-md-12" id="quote">
 								<hr />
 									<span class="font-lato fs-30 fullwidth m-0 rad-0">
-										<strong>Request a Quote</strong>
+										<legend>Request a Quote</legend>
 									</span>
 									<hr />
 
@@ -175,12 +175,43 @@
 									</div>
 								</div>
 
-								<div class="row">
-									<div class="col-md-3" id="elevator-amount">
-										<label>Number of Elevator</label>
-										<input readonly id="elevator-return" value="" class="form-control"></input>
-								   </div>
-								</div>
+							<div id="quality-selector" class="form-group col-md-12">
+								<fieldset>
+									<hr />
+									<span class="font-lato fs-30 fullwidth m-0 rad-0">
+										<legend>Service Quality</legend>
+									</span>
+									<hr />
+									<label id="standard-select" for="standard">Standard</label>
+									<input type="radio" id="standard">
+									<label id="premium-select" for="Premium">Premium</label>
+									<input type="radio" id="premium">
+									<label id="excelium-select" for="Excelium">Excelium</label>
+									<input type="radio" id="excelium">
+								</fieldset>
+							</div>
+
+							<div id="result-row" class="row">
+								<div class="col-md-3" id="elevator-amount">
+									<label>Number of Elevator</label>
+									<input readonly id="elevator-return" value="" class="form-control"></input>
+							   </div>
+							   <div class="col-md-3" id="elevator-unit-price">
+									<label>Elevator Unit Price</label>
+									<input readonly id="elevator-unit" value="" class="form-control"></input>
+							   </div>
+							   <div class="col-md-3" id="elevator-total-price">
+									<label>Elevator Total Price</label>
+									<input readonly id="elevator-total" value="" class="form-control"></input>
+							   </div>
+							   <div class="col-md-3" id="installation-fees">
+									<label>Installation Fees</label>
+									<input readonly id="install-fee" value="" class="form-control"></input>
+							   </div>
+							   <div class="col-md-3" id="final-price">
+									<label>Final Price</label>
+									<input readonly id="f-price" value="" class="form-control"></input>
+							   </div>
 							</div>
 						</form>
 					</div>
