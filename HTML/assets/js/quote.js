@@ -15,9 +15,17 @@ $("#maximum-occupancy").hide();
 $("#business-hours").hide();
 $("#result-row").hide();
 $("#quality-selector").hide();
+$("#submit-button").hide();
+$("#success").hide();
 
 $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
+})
+
+$(window).ready(function () {
+    $("#submit-button").click(function() {
+        $("#success").show();
+    });
 })
 
 function buildingTypeChange() {
@@ -36,10 +44,6 @@ function buildingTypeChange() {
     $("#elevator-total").val(0);
     $("#install-fee").val(0);
     $("#f-price").val(0);
-
-    $("#excelium-select").removeClass("btn-blue col-md-3")
-    $("#standard-select").removeClass("btn-blue col-md-3")
-    $("#premium-select").removeClass("btn-blue col-md-3")
     
     if (this.value == "residential") {
         $("#number-of-appartments").show();
@@ -53,6 +57,7 @@ function buildingTypeChange() {
         $("#business-hours").hide();
         $("#result-row").show();
         $("#quality-selector").show();
+        $("#submit-button").show();
 
         $(window).ready(function () {
             $("#nb-appartments").on("change", appartmentsChange);
@@ -77,6 +82,7 @@ function buildingTypeChange() {
         $("#business-hours").hide();
         $("#result-row").show();
         $("#quality-selector").show();
+        $("#submit-button").show();
 
         $(window).ready(function () {
             $("#nb-elevators").on("change", elevatorChange);
@@ -98,6 +104,7 @@ function buildingTypeChange() {
         $("#business-hours").hide();
         $("#result-row").show();
         $("#quality-selector").show();
+        $("#submit-button").show();
 
         $(window).ready(function () {
             $("#nb-floors").on("change", corporateFloorChange);
@@ -125,6 +132,7 @@ function buildingTypeChange() {
         $("#business-hours").show();
         $("#result-row").show();
         $("#quality-selector").show();
+        $("#submit-button").show();
 
         $(window).ready(function () {
             $("#nb-floors").on("change", corporateFloorChange);
@@ -152,6 +160,7 @@ function buildingTypeChange() {
         $("#business-hours").hide();
         $("#result-row").hide();
         $("#quality-selector").hide();
+        $("#submit-button").hide();
     }
 }
 
@@ -218,12 +227,9 @@ function basementChange() {
 function priceCalculator() {
     if($('#standard').is(":checked")) {
         console.log("Price Calculator");
-        $("#standard").prop("checked", false);
-        $("#premium").prop("checked", false);
-        $("#excelium").prop("checked", false);
-        $("#excelium-select").removeClass("btn-blue col-md-3");
-        $("#standard-select").addClass("btn-blue col-md-3");
-        $("#premium-select").removeClass("btn-blue col-md-3");
+        $("#standard-label").addClass("col-md-2 btn-blue")
+        $("#premium-label").removeClass("col-md-2 btn-blue")
+        $("#excelium-label").removeClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(7565 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");  
@@ -237,12 +243,9 @@ function priceCalculator() {
 
     else if($('#premium').is(":checked")) {
         console.log("Price Calculator 2");
-        $("#standard").prop("checked", false);
-        $("#premium").prop("checked", false);
-        $("#excelium").prop("checked", false);
-        $("#excelium-select").removeClass("btn-blue col-md-3");
-        $("#standard-select").removeClass("btn-blue col-md-3");
-        $("#premium-select").addClass("btn-blue col-md-3");
+        $("#standard-label").removeClass("col-md-2 btn-blue")
+        $("#premium-label").addClass("col-md-2 btn-blue")
+        $("#excelium-label").removeClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(12345 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
@@ -256,12 +259,9 @@ function priceCalculator() {
 
     else if($('#excelium').is(":checked")) {
         console.log("Price Calculator 3");
-        $("#premium").prop("checked", false);
-        $("#standard").prop("checked", false);
-        $("#excelium").prop("checked", false);
-        $("#excelium-select").addClass("btn-blue col-md-3");
-        $("#standard-select").removeClass("btn-blue col-md-3");
-        $("#premium-select").removeClass("btn-blue col-md-3");
+        $("#standard-label").removeClass("col-md-2 btn-blue")
+        $("#premium-label").removeClass("col-md-2 btn-blue")
+        $("#excelium-label").addClass("col-md-2 btn-blue")
 
         $("#elevator-unit").val(15400 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");

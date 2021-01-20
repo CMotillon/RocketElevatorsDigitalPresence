@@ -110,6 +110,7 @@
 				<section id="quote-calculator">
 					<div class="container">
 						<form id="quote-calculator-form">
+
 							<div class="form-group col-md-3">
 								<label for="building-type">Building Type</label>
 								<select class="form-control" id="building-type">
@@ -120,6 +121,13 @@
 									<option id="hybrid" value="hybrid">Hybrid</option>
 								</select>
 							</div>
+
+							<!-- Alert Success -->
+							<div id="success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<strong>Thank You!</strong> Your quote has been successfully sent!
+							</div>
+							<!-- /Alert Success -->
 
 							<div class="form-group col-md-12" id="quote">
 								<hr />
@@ -176,19 +184,29 @@
 								</div>
 
 							<div id="quality-selector" class="form-group col-md-12">
-								<fieldset>
 									<hr />
 									<span class="font-lato fs-30 fullwidth m-0 rad-0">
 										<legend>Service Quality</legend>
 									</span>
 									<hr />
-									<label id="standard-select" for="standard">Standard</label>
-									<input type="radio" id="standard">
-									<label id="premium-select" for="Premium">Premium</label>
-									<input type="radio" id="premium">
-									<label id="excelium-select" for="Excelium">Excelium</label>
-									<input type="radio" id="excelium">
-								</fieldset>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="radio" id="standard" value="standard">
+										<label class="form-check-label" for="standard" id="standard-label">
+										  Standard
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="radio" id="premium" value="premium">
+										<label class="form-check-label" for="premium" id="premium-label">
+										  Premium
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="radio" id="excelium" value="excelium">
+										<label class="form-check-label" for="excelium" id="excelium-label">
+										  Excelium
+										</label>
+									</div>
 							</div>
 
 							<div id="result-row" class="row">
@@ -212,6 +230,12 @@
 									<label>Final Price</label>
 									<input readonly id="f-price" value="" class="form-control"></input>
 							   </div>
+							</div>
+
+							<div class="row" id="submit-button">
+								<div class="col-md-12">
+									<button type="button" class="btn btn-blue">SUBMIT QUOTE</button>
+								</div>
 							</div>
 						</form>
 					</div>

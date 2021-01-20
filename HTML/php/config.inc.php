@@ -16,8 +16,8 @@ $config['use_smtp']				= true;						// true|false
 **/
 $config['smtp_host'] 			= 'smtp.gmail.com';   					// eg.: smtp.gmail.com
 $config['smtp_port'] 			= 587;						// eg.: 587
-$config['smtp_user'] 			= 'cmoutlook17@gmail.com'; 						// you@gmail.com
-$config['smtp_pass'] 			= 'consecrateur0136';						// password
+$config['smtp_user'] 			= ''; 						// you@gmail.com
+$config['smtp_pass'] 			= '';						// password
 $config['smtp_ssl']				= false;					// should remain false
 
 
