@@ -231,11 +231,11 @@ function priceCalculator() {
         $("#elevator-unit").val(7565 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");  
         $("#install-fee").val(parseFloat($("#elevator-total").val()) * 0.10 + " $");
-        $("#f-price").val((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#f-price").val(((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
 
-        $("#elevator-unit").val(parseFloat($("#elevator-unit").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#elevator-total").val(parseFloat($("#elevator-total").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#install-fee").val(parseFloat($("#install-fee").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
     }
 
     else if($('#premium').is(":checked")) {
@@ -243,12 +243,12 @@ function priceCalculator() {
 
         $("#elevator-unit").val(12345 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
-        $("#install-fee").val(parseFloat($("#elevator-total").val()) * 0.13 + " $");
-        $("#f-price").val((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#install-fee").val((parseFloat($("#elevator-total").val()) * 0.13).toFixed(2));
+        $("#f-price").val(((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
 
-        $("#elevator-unit").val(parseFloat($("#elevator-unit").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#elevator-total").val(parseFloat($("#elevator-total").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#install-fee").val(parseFloat($("#install-fee").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
     }
 
     else if($('#excelium').is(":checked")) {
@@ -257,10 +257,10 @@ function priceCalculator() {
         $("#elevator-unit").val(15400 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
         $("#install-fee").val(parseFloat($("#elevator-total").val()) * 0.16 + " $");
-        $("#f-price").val((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#f-price").val(((parseFloat($("#elevator-total").val()) + parseFloat($("#install-fee").val())).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
 
-        $("#elevator-unit").val(parseFloat($("#elevator-unit").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#elevator-total").val(parseFloat($("#elevator-total").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
-        $("#install-fee").val(parseFloat($("#install-fee").val()).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+        $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
     }
 }
