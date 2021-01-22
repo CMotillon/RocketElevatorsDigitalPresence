@@ -20,17 +20,9 @@ $(window).ready(function () {
 
 //SUBMIT BUTTON
 $(window).ready(function () {
-    if ($("#f-price") >= 0) {
-        $("#submit-button").click(function() {
-            $("#success").show();
-        });
-    }
-
-    else {
-        $("#submit-button").click(function() {
-            $("#error").show();
-        });
-    }
+    $("#submit-button").click(function() {
+        $("#success").show();
+    });
 })
 
 // BUILDING TYPE CHANGE
