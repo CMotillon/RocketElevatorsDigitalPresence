@@ -12,6 +12,7 @@ $("#result-row").hide();
 $("#quality-selector").hide();
 $("#submit-button").hide();
 $("#success").hide();
+$("#button-submit").attr("disabled", true);
 
 $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
@@ -264,6 +265,8 @@ function priceCalculator() {
         $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+
+        $("#button-submit").attr("disabled", false);
     }
 
     else if($('#premium').is(":checked")) {
@@ -277,6 +280,8 @@ function priceCalculator() {
         $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+
+        $("#button-submit").attr("disabled", false);
     }
 
     else if($('#excelium').is(":checked")) {
@@ -290,5 +295,7 @@ function priceCalculator() {
         $("#elevator-unit").val((parseFloat($("#elevator-unit").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#elevator-total").val((parseFloat($("#elevator-total").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
         $("#install-fee").val((parseFloat($("#install-fee").val()).toFixed(2)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " $");
+
+        $("#button-submit").attr("disabled", false);
     }
 }
