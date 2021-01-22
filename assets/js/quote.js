@@ -12,7 +12,6 @@ $("#result-row").hide();
 $("#quality-selector").hide();
 $("#submit-button").hide();
 $("#success").hide();
-$("#error").hide();
 
 $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
