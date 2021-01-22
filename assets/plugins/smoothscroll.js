@@ -333,9 +333,6 @@
 				if (Math.abs(deltaY) > 1.2) {
 					deltaY *= options.stepSize / 120;
 				}
-
-				scrollArray(overflowing, -deltaX, -deltaY);
-				event.preventDefault();
 			}
 
 			/**

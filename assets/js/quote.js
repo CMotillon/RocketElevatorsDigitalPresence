@@ -27,7 +27,6 @@ $(window).ready(function () {
 
 // BUILDING TYPE CHANGE
 function buildingTypeChange() {
-    console.log(this.value);
     $("#nb-appartments").val(0);
     $("#nb-floors").val(0);
     $("#nb-basements").val(0);
@@ -192,12 +191,10 @@ function buildingTypeChange() {
 
 // FUNCTIONS FOR VALUE CHANGES
 function elevatorChange() {
-    console.log(this.value);
     $("#elevator-return").val(this.value);
 }
 
 function appartmentsChange() {
-    console.log(this.value);
     $("#elevator-return").val(Math.ceil(this.value / $("#nb-floors").val() / 6));
     if ($("#elevator-return").val() == Infinity) {
         $("#elevator-return").val(0);
@@ -208,7 +205,6 @@ function appartmentsChange() {
 }
 
 function residentialFloorChange() {
-    console.log(this.value);
     $("#elevator-return").val(Math.ceil($("#nb-appartments").val() / this.value / 6));
     if ($("#elevator-return").val() == Infinity) {
         $("#elevator-return").val(0);
@@ -219,7 +215,6 @@ function residentialFloorChange() {
 }
 
 function occupancyChange() {
-    console.log(this.value);
     var Elevator = Math.ceil((parseFloat($("#nb-occupancy").val())) * ((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val()))) / 1000);
     var Column = Math.ceil(((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val())))/20);
     var ElevatorColumn = Math.ceil(Elevator / Column);
@@ -230,23 +225,19 @@ function occupancyChange() {
 }
 
 function corporateFloorChange() {
-    console.log(this.value);
     var Elevator2 = Math.ceil((parseFloat($("#nb-occupancy").val())) * ((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val()))) / 1000);
     var Column2 = Math.ceil(((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val())))/20);
     var ElevatorColumn2 = Math.ceil(Elevator2 / Column2);
     var totalElevator2 = ElevatorColumn2 * Column2;
-    console.log(Column2, Elevator2, ElevatorColumn2, totalElevator2);
 
     $("#elevator-return").val(totalElevator2);
 }
 
 function basementChange() {
-    console.log(this.value);
     var Elevator3 = Math.ceil((parseFloat($("#nb-occupancy").val())) * ((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val()))) / 1000);
     var Column3 = Math.ceil(((parseFloat($("#nb-floors").val())) + (parseFloat($("#nb-basements").val())))/20);
     var ElevatorColumn3 = Math.ceil(Elevator3 / Column3);
     var totalElevator3 = ElevatorColumn3 * Column3;
-    console.log(Column3, Elevator3, ElevatorColumn3, totalElevator3);
 
     $("#elevator-return").val(totalElevator3);
 }
@@ -255,7 +246,6 @@ function basementChange() {
 // PRICE CALCULATOR
 function priceCalculator() {
     if($('#standard').is(":checked")) {
-        console.log("Price Calculator");
 
         $("#elevator-unit").val(7565 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");  
@@ -270,7 +260,6 @@ function priceCalculator() {
     }
 
     else if($('#premium').is(":checked")) {
-        console.log("Price Calculator 2");
 
         $("#elevator-unit").val(12345 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
@@ -285,7 +274,6 @@ function priceCalculator() {
     }
 
     else if($('#excelium').is(":checked")) {
-        console.log("Price Calculator 3");
 
         $("#elevator-unit").val(15400 + " $");
         $("#elevator-total").val(parseFloat($("#elevator-unit").val()) * parseFloat($("#elevator-return").val()) + " $");
