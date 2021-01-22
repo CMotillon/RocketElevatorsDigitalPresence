@@ -1,9 +1,3 @@
-$.fn.digits = function(){ 
-    return this.each(function(){ 
-        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
-    })
-}
-
 $("#number-of-appartments").hide();
 $("#number-of-floors").hide();
 $("#number-of-basements").hide();
@@ -17,15 +11,24 @@ $("#result-row").hide();
 $("#quality-selector").hide();
 $("#submit-button").hide();
 $("#success").hide();
+$("#error").hide();
 
 $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
 })
 
 $(window).ready(function () {
-    $("#submit-button").click(function() {
-        $("#success").show();
-    });
+    if ($("#f-price") >= 0) {
+        $("#submit-button").click(function() {
+            $("#success").show();
+        });
+    }
+
+    else {
+        $("#submit-button").click(function() {
+            $("#error").show();
+        });
+    }
 })
 
 function buildingTypeChange() {
@@ -63,7 +66,13 @@ function buildingTypeChange() {
             $("#nb-appartments").on("change", appartmentsChange);
         })
         $(window).ready(function () {
+            $("#nb-appartments").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#nb-floors").on("change", residentialFloorChange);
+        })
+        $(window).ready(function () {
+            $("#nb-floors").on("change", priceCalculator);
         })
         $(window).ready(function () {
             $("#quality-selector").on("change", priceCalculator);
@@ -88,6 +97,9 @@ function buildingTypeChange() {
             $("#nb-elevators").on("change", elevatorChange);
         })
         $(window).ready(function () {
+            $("#nb-elevators").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#quality-selector").on("change", priceCalculator);
         })
     }
@@ -110,10 +122,19 @@ function buildingTypeChange() {
             $("#nb-floors").on("change", corporateFloorChange);
         })
         $(window).ready(function () {
+            $("#nb-floors").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#nb-occupancy").on("change", occupancyChange);
         })
         $(window).ready(function () {
+            $("#nb-occupancy").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#nb-basements").on("change", basementChange);
+        })
+        $(window).ready(function () {
+            $("#nb-basements").on("change", priceCalculator);
         })
         $(window).ready(function () {
             $("#quality-selector").on("change", priceCalculator);
@@ -138,10 +159,19 @@ function buildingTypeChange() {
             $("#nb-floors").on("change", corporateFloorChange);
         })
         $(window).ready(function () {
+            $("#nb-floors").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#nb-occupancy").on("change", occupancyChange);
         })
         $(window).ready(function () {
+            $("#nb-occupancy").on("change", priceCalculator);
+        })
+        $(window).ready(function () {
             $("#nb-basements").on("change", basementChange);
+        })
+        $(window).ready(function () {
+            $("#nb-basements").on("change", priceCalculator);
         })
         $(window).ready(function () {
             $("#quality-selector").on("change", priceCalculator);
