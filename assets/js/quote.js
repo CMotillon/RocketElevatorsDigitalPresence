@@ -1,3 +1,4 @@
+// HIDES THE ROWS
 $("#number-of-appartments").hide();
 $("#number-of-floors").hide();
 $("#number-of-basements").hide();
@@ -17,6 +18,7 @@ $(window).ready(function () {
     $("#building-type").on("change", buildingTypeChange);
 })
 
+//SUBMIT BUTTON
 $(window).ready(function () {
     if ($("#f-price") >= 0) {
         $("#submit-button").click(function() {
@@ -31,6 +33,7 @@ $(window).ready(function () {
     }
 })
 
+// BUILDING TYPE CHANGE
 function buildingTypeChange() {
     console.log(this.value);
     $("#nb-appartments").val(0);
@@ -194,6 +197,8 @@ function buildingTypeChange() {
     }
 }
 
+
+// FUNCTIONS FOR VALUE CHANGES
 function elevatorChange() {
     console.log(this.value);
     $("#elevator-return").val(this.value);
@@ -254,6 +259,8 @@ function basementChange() {
     $("#elevator-return").val(totalElevator3);
 }
 
+
+// PRICE CALCULATOR
 function priceCalculator() {
     if($('#standard').is(":checked")) {
         console.log("Price Calculator");
